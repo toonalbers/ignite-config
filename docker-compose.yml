@@ -1,0 +1,17 @@
+version: "3.5"
+
+networks:
+  hostnet:
+    external: true
+    name: host
+
+services:
+  runner:
+    image: apacheignite/ignite
+    environment:
+      - "CONFIG_URI=https://raw.githubusercontent.com/coenvl/ignite-config/master/p2p/TcpDicoverySingleJobConfiguration.xml"
+    networks:
+      hostnet: {}
+    deploy:
+      mode: replicated
+      replicas: 3
