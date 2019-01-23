@@ -9,7 +9,7 @@ services:
   runner:
     image: apacheignite/ignite:2.7.0
     environment:
-      - "CONFIG_URI=https://raw.githubusercontent.com/coenvl/ignite-config/master/p2p/TcpDicoverySingleJobConfiguration.xml"
+      - "CONFIG_URI=https://raw.githubusercontent.com/coenvl/ignite-config/master/p2p/peerclassloading-configuration.xml"
     networks:
       hostnet: {}
     deploy:
