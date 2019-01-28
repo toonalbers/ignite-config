@@ -5,7 +5,7 @@ import org.apache.ignite.Ignition;
 
 public class Main {
 
-	private final static String CONFIG_URI = "https://raw.githubusercontent.com/coenvl/ignite-config/master/p2p/TcpDicoverySingleJobConfiguration.xml";
+	private final static String CONFIG_URI = "https://raw.githubusercontent.com/coenvl/ignite-config/master/p2p/peerclassloading-configuration.xml";
 	
 	public static void main(String [] args) {
 		Ignite ignite = Ignition.start(CONFIG_URI);
