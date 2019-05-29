@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+       http://www.apache.org/licenses/LICENSE-2.0
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="org.apache.ignite.configuration.IgniteConfiguration">
+        <property name="peerClassLoadingEnabled" value="true"/>
+
+        <property name="publicThreadPoolSize" value="1"/>
+
+        <property name="collisionSpi">
+            <bean class="org.apache.ignite.spi.collision.fifoqueue.FifoQueueCollisionSpi">
+                <property name="parallelJobsNumber" value="1"/>
+            </bean>
+        </property>
+
+        <property name="discoverySpi">
+        <bean class="org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi">
+            <property name="ipFinder">
+                <bean class="org.apache.ignite.spi.discovery.tcp.ipfinder.vm.TcpDiscoveryVmIpFinder">
+                    <property name="addresses">
+                        <list>
+                            <value>10.10.1.1:47500</value>
+                            <value>10.10.1.2:47500</value>
+                            <value>10.10.1.3:47500</value>
+                            <value>10.10.1.4:47500</value>
+                            <value>10.10.1.5:47500</value>
+                            <value>10.10.1.6:47500</value>
+                            <value>10.10.1.7:47500</value>
+                            <value>10.10.1.8:47500</value>
+                            <value>10.10.1.9:47500</value>
+                            <value>10.10.1.10:47500</value>
+                            <value>10.10.1.11:47500</value>
+                            <value>10.10.1.12:47500</value>
+                            <value>10.10.1.13:47500</value>
+                            <value>10.10.1.14:47500</value>
+                            <value>10.10.1.15:47500</value>
+                            <value>10.10.1.16:47500</value>
+                            <value>10.10.1.17:47500</value>
+                            <value>10.10.1.18:47500</value>
+                            <value>10.10.1.19:47500</value>
+                            <value>10.10.1.20:47500</value>
+                            <value>10.10.1.21:47500</value>
+                            <value>10.10.1.22:47500</value>
+                            <value>10.10.1.23:47500</value>
+                            <value>10.10.1.24:47500</value>
+                            <value>10.10.1.25:47500</value>
+                            <value>10.10.1.26:47500</value>
+                            <value>10.10.1.27:47500</value>
+                            <value>10.10.1.28:47500</value>
+                            <value>10.10.1.29:47500</value>
+                            <value>10.10.1.30:47500</value>
+                            <value>10.10.1.31:47500</value>
+                            <value>10.10.1.32:47500</value>
+                            <value>10.10.1.33:47500</value>
+                            <value>10.10.1.34:47500</value>
+                            <value>10.10.1.35:47500</value>
+                            <value>10.10.1.36:47500</value>
+                            <value>10.10.1.37:47500</value>
+                            <value>10.10.1.38:47500</value>
+                            <value>10.10.1.39:47500</value>
+                            <value>10.10.1.40:47500</value>
+                            <value>10.10.1.41:47500</value>
+                            <value>10.10.1.42:47500</value>
+                            <value>10.10.1.43:47500</value>
+                            <value>10.10.1.44:47500</value>
+                            <value>10.10.1.45:47500</value>
+                            <value>10.10.1.46:47500</value>
+                            <value>10.10.1.47:47500</value>
+                            <value>10.10.1.48:47500</value>
+                            <value>10.10.1.49:47500</value>
+                            <value>10.10.1.50:47500</value>
+                            <value>10.10.1.51:47500</value>
+                            <value>10.10.1.52:47500</value>
+                            <value>10.10.1.53:47500</value>
+                            <value>10.10.1.54:47500</value>
+                            <value>10.10.1.55:47500</value>
+                            <value>10.10.1.56:47500</value>
+                            <value>10.10.1.57:47500</value>
+                            <value>10.10.1.58:47500</value>
+                            <value>10.10.1.59:47500</value>
+                            <value>10.10.1.60:47500</value>
+                            <value>10.10.1.61:47500</value>
+                            <value>10.10.1.62:47500</value>
+                            <value>10.10.1.63:47500</value>
+                            <value>10.10.1.64:47500</value>
+                            <value>10.10.1.65:47500</value>
+                            <value>10.10.1.66:47500</value>
+                            <value>10.10.1.67:47500</value>
+                            <value>10.10.1.68:47500</value>
+                            <value>10.10.1.69:47500</value>
+                            <value>10.10.1.70:47500</value>
+                            <value>10.10.1.71:47500</value>
+                            <value>10.10.1.72:47500</value>
+                            <value>10.10.1.73:47500</value>
+                            <value>10.10.1.74:47500</value>
+                            <value>10.10.1.75:47500</value>
+                            <value>10.10.1.76:47500</value>
+                            <value>10.10.1.77:47500</value>
+                            <value>10.10.1.78:47500</value>
+                            <value>10.10.1.79:47500</value>
+                            <value>10.10.1.80:47500</value>
+                            <value>10.10.1.81:47500</value>
+                            <value>10.10.1.82:47500</value>
+                            <value>10.10.1.83:47500</value>
+                            <value>10.10.1.84:47500</value>
+                            <value>10.10.1.85:47500</value>
+                            <value>10.10.1.86:47500</value>
+                            <value>10.10.1.87:47500</value>
+                            <value>10.10.1.88:47500</value>
+                            <value>10.10.1.89:47500</value>
+                            <value>10.10.1.90:47500</value>
+                            <value>10.10.1.91:47500</value>
+                            <value>10.10.1.92:47500</value>
+                            <value>10.10.1.93:47500</value>
+                            <value>10.10.1.94:47500</value>
+                            <value>10.10.1.95:47500</value>
+                            <value>10.10.1.96:47500</value>
+                            <value>10.10.1.97:47500</value>
+                            <value>10.10.1.98:47500</value>
+                            <value>10.10.1.99:47500</value>
+                            <value>10.10.1.100:47500</value>
+                            <value>10.10.2.1:47500</value>
+                            <value>10.10.2.2:47500</value>
+                            <value>10.10.2.3:47500</value>
+                            <value>10.10.2.4:47500</value>
+                            <value>10.10.2.5:47500</value>
+                            <value>10.10.2.6:47500</value>
+                            <value>10.10.2.7:47500</value>
+                            <value>10.10.2.8:47500</value>
+                            <value>10.10.2.9:47500</value>
+                            <value>10.10.2.10:47500</value>
+                            <value>10.10.2.11:47500</value>
+                            <value>10.10.2.12:47500</value>
+                            <value>10.10.2.13:47500</value>
+                            <value>10.10.2.14:47500</value>
+                            <value>10.10.2.15:47500</value>
+                            <value>10.10.2.16:47500</value>
+                            <value>10.10.2.17:47500</value>
+                            <value>10.10.2.18:47500</value>
+                            <value>10.10.2.19:47500</value>
+                            <value>10.10.2.20:47500</value>
+                            <value>10.10.2.21:47500</value>
+                            <value>10.10.2.22:47500</value>
+                            <value>10.10.2.23:47500</value>
+                            <value>10.10.2.24:47500</value>
+                            <value>10.10.2.25:47500</value>
+                            <value>10.10.2.26:47500</value>
+                            <value>10.10.2.27:47500</value>
+                            <value>10.10.2.28:47500</value>
+                            <value>10.10.2.29:47500</value>
+                            <value>10.10.2.30:47500</value>
+                            <value>10.10.2.31:47500</value>
+                            <value>10.10.2.32:47500</value>
+                            <value>10.10.2.33:47500</value>
+                            <value>10.10.2.34:47500</value>
+                            <value>10.10.2.35:47500</value>
+                            <value>10.10.2.36:47500</value>
+                            <value>10.10.2.37:47500</value>
+                            <value>10.10.2.38:47500</value>
+                            <value>10.10.2.39:47500</value>
+                            <value>10.10.2.40:47500</value>
+                            <value>10.10.2.41:47500</value>
+                            <value>10.10.2.42:47500</value>
+                            <value>10.10.2.43:47500</value>
+                            <value>10.10.2.44:47500</value>
+                            <value>10.10.2.45:47500</value>
+                            <value>10.10.2.46:47500</value>
+                            <value>10.10.2.47:47500</value>
+                            <value>10.10.2.48:47500</value>
+                            <value>10.10.2.49:47500</value>
+                            <value>10.10.2.50:47500</value>
+                            <value>10.10.2.51:47500</value>
+                            <value>10.10.2.52:47500</value>
+                            <value>10.10.2.53:47500</value>
+                            <value>10.10.2.54:47500</value>
+                            <value>10.10.2.55:47500</value>
+                            <value>10.10.2.56:47500</value>
+                            <value>10.10.2.57:47500</value>
+                            <value>10.10.2.58:47500</value>
+                            <value>10.10.2.59:47500</value>
+                            <value>10.10.2.60:47500</value>
+                            <value>10.10.2.61:47500</value>
+                            <value>10.10.2.62:47500</value>
+                            <value>10.10.2.63:47500</value>
+                            <value>10.10.2.64:47500</value>
+                            <value>10.10.2.65:47500</value>
+                            <value>10.10.2.66:47500</value>
+                            <value>10.10.2.67:47500</value>
+                            <value>10.10.2.68:47500</value>
+                            <value>10.10.2.69:47500</value>
+                            <value>10.10.2.70:47500</value>
+                            <value>10.10.2.71:47500</value>
+                            <value>10.10.2.72:47500</value>
+                            <value>10.10.2.73:47500</value>
+                            <value>10.10.2.74:47500</value>
+                            <value>10.10.2.75:47500</value>
+                            <value>10.10.2.76:47500</value>
+                            <value>10.10.2.77:47500</value>
+                            <value>10.10.2.78:47500</value>
+                            <value>10.10.2.79:47500</value>
+                            <value>10.10.2.80:47500</value>
+                            <value>10.10.2.81:47500</value>
+                            <value>10.10.2.82:47500</value>
+                            <value>10.10.2.83:47500</value>
+                            <value>10.10.2.84:47500</value>
+                            <value>10.10.2.85:47500</value>
+                            <value>10.10.2.86:47500</value>
+                            <value>10.10.2.87:47500</value>
+                            <value>10.10.2.88:47500</value>
+                            <value>10.10.2.89:47500</value>
+                            <value>10.10.2.90:47500</value>
+                            <value>10.10.2.91:47500</value>
+                            <value>10.10.2.92:47500</value>
+                            <value>10.10.2.93:47500</value>
+                            <value>10.10.2.94:47500</value>
+                            <value>10.10.2.95:47500</value>
+                            <value>10.10.2.96:47500</value>
+                            <value>10.10.2.97:47500</value>
+                            <value>10.10.2.98:47500</value>
+                            <value>10.10.2.99:47500</value>
+                            <value>10.10.2.100:47500</value>
+                        </list>
+                    </property>
+                </bean>
+            </property>
+        </bean>
+        </property>
+    </bean>
+</beans>
